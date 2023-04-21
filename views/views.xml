@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <template id="exercise-customsnippet" inherit_id="website.snippets"
+            name="Exercise1 Custom Snippet">
+
+            <xpath expr="//div[@id='snippet_content']" position="inside">
+                <div class="o_panel_body">
+                    <t t-snippet="sc_dfakto_ex1.exercise_form"
+                        t-thumbnail="/sc_dfakto_ex1/static/description/icon.png" />
+                </div>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

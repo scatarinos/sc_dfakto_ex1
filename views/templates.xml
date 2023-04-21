@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id='exercise_form' name="Exercise1 Form">
+        <section>
+
+            <div class="justify-content-center" style="padding: 5% 5% 5% 5%;">
+                <form class="oe_form" action='/sc_dfakto_ex1/form-controller/' method="POST">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend w-25">
+                            <span class="input-group-text" id="basic-addon1">Name</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Insert your name"
+                            aria-label="Name" aria-describedby="basic-addon1" name="name"
+                        />
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend w-25">
+                            <span class="input-group-text" id="basic-addon1">Email<br />Address</span>
+                        </div>
+                        <input type="email" class="form-control"
+                            name="email" 
+                            aria-label="Email Address" aria-describedby="Email Address"
+                            placeholder="Insert your email" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend w-25">
+                          <label class="input-group-text" for="gender">Gender</label>
+                        </div>
+                        <select class="form-control custom-select w-75" id="gender" name="gender">
+                          <option selected="1">Gender</option>
+                          <option value="famale">Female</option>
+                          <option value="male">Male</option>
+                          <option value="not-sure">Not Sure</option>
+                        </select>
+                      </div>
+
+                    <div class="input-group custom-textarea-widget">
+                        <div class="input-group-prepend w-25">
+                            <span class="input-group-text" style="height: 100% !important;">Description</span>
+                        </div>
+                        <textarea
+                            name="description" 
+                            class="form-control"
+                            widget="web_editor"
+                            aria-label="Description" id='myTextarea'></textarea>
+                        <script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.4.1/tinymce.min.js"
+                            integrity="sha512-in/06qQzsmVw+4UashY2Ta0TE3diKAm8D4aquSWAwVwsmm1wLJZnDRiM6e2lWhX+cSqJXWuodoqUq91LlTo1EA=="
+                            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                        <script>
+                            tinymce.init({
+                                selector: '#myTextarea',
+                                width: '75%',
+                                menubar: 'edit insert view format table tools help',
+                                promotion: false,
+                                branding: false,
+                                elementpath: false,
+                            });
+
+                        </script>
+                        <style>
+
+                        </style>
+                    </div>
+
+                    <br />
+
+
+                    <input class="btn btn-primary" type="submit" value="Submit" />
+
+                </form>
+            </div>
+
+        </section>
+    </template>
+</odoo>
